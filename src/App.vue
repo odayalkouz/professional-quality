@@ -1,27 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <KeyboardEvent/>  
+    <MouseEvent/>
+  </div>  
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
-
+import { Options, Vue } from "vue-class-component";
+import KeyboardEvent from "./components/KeyboardEvent.vue";
+import MouseEvent from "./components/MouseEvent.vue";
 @Options({
   components: {
-    HelloWorld,
+    KeyboardEvent,
+    MouseEvent,
   },
 })
 export default class App extends Vue {}
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+body
+  padding: 0
+  margin: 0
+  #app
+    font-family: Avenir, Helvetica, Arial, sans-serif
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+    text-align: center
+    color: #2c3e50
+
 </style>
